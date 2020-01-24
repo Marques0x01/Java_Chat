@@ -1,0 +1,14 @@
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/model/Quote.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/connection/ConnectionFactory.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/view/Chat.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/connection/ConnectionFactoryServer.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/view/Start.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/app/Client.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/view/Mural.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/model/User.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/model/QuoteDao.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/view/Register.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/view/Login.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/server/Threads.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/server/Server.java
+/home/marques/Documents/Development/Projects/APS/JavaChat/src/main/java/com/unip/aps_redes/model/UserDao.java
