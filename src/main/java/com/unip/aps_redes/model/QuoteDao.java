@@ -17,6 +17,29 @@ public class QuoteDao {
         con = ConnectionFactory.getConnection(ip);
     }
 
+  
+    public Quote getQuoteBySubject(String subject){
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        Quote quote = null;
+        try {
+            statement = con.prepareStatement("SELECT * FROM tb_quote WHERE subject like '%"+subject+"%'");
+            
+            result = statement.executeQuery();
+            
+            while (result.next()){
+                quote = new Quote(result.getString("username"), result.getString("subject"), result.getString("text"));
+            }
+        } catch(SQLException ex){
+            ex.printStackTrace();
+            System.out.println("Não foi possivel localizar quote");
+        } finally {
+            ConnectionFactory.closeConnection(con, statement);
+        }
+        
+        return quote;
+    }
+    
     public List<Quote> getQuotes() {
         List<Quote> quotes = new ArrayList<>();
         PreparedStatement statement = null;
@@ -34,6 +57,8 @@ public class QuoteDao {
         } catch (SQLException ex) {
             System.out.println("Não foi possivel recuperar a list");
             ex.printStackTrace();
+        } finally {
+            ConnectionFactory.closeConnection(con, statement);
         }
 
         return quotes;
@@ -56,5 +81,7 @@ public class QuoteDao {
             ConnectionFactory.closeConnection(con, statement);
         }
     }
+    
+
 
 }

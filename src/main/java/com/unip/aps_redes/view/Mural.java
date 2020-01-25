@@ -44,7 +44,6 @@ public class Mural extends javax.swing.JFrame {
             rowData[1] = quote.getSubject();
             model.addRow(rowData);
         }
-        
     }
 
     public void refreshTable() {
@@ -67,7 +66,7 @@ public class Mural extends javax.swing.JFrame {
         textTxt = new javax.swing.JTextArea();
         refreshB = new javax.swing.JToggleButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(14, 99, 27));
 
@@ -205,6 +204,16 @@ public class Mural extends javax.swing.JFrame {
     }//GEN-LAST:event_refreshBActionPerformed
 
     private void showBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showBActionPerformed
+        int row = tableQuotes.getSelectedRow();
+        String value = tableQuotes.getValueAt(row, 1).toString();
+        QuoteDao dao = new QuoteDao(ipServer);
+        
+        Quote quote = dao.getQuoteBySubject(value);
+        
+        if(quote != null){
+            QuoteView quoteView = new QuoteView(quote);
+            quoteView.setVisible(true);
+        }
         
     }//GEN-LAST:event_showBActionPerformed
 
