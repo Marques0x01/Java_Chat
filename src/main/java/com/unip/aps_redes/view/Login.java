@@ -1,6 +1,6 @@
 package com.unip.aps_redes.view;
 
-import com.unip.aps_redes.model.UserDao;
+import com.unip.aps_redes.dao.UserDao;
 import java.awt.Toolkit;
 import static javax.swing.JOptionPane.showMessageDialog;
 

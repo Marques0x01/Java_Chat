@@ -1,6 +1,7 @@
- package com.unip.aps_redes.model;
+ package com.unip.aps_redes.dao;
 
 import com.unip.aps_redes.connection.ConnectionFactory;
+import com.unip.aps_redes.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

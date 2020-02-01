@@ -23,7 +23,7 @@ public class Chat extends javax.swing.JFrame {
         this.ipServer = ipServer;
         try {
             socket = new Socket(ipServer, 5000);
-            showMessageDialog(null, "Logado com sucesso ! \nConectado " + InetAddress.getLocalHost().getHostAddress());
+            showMessageDialog(null, "Logado com sucesso ! \nConectado " + this.ipServer);
         } catch (Exception e) {
             showMessageDialog(null, "Não conectado");
             System.exit(0);

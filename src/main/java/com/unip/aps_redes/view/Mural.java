@@ -1,7 +1,7 @@
 package com.unip.aps_redes.view;
 
 import com.unip.aps_redes.model.Quote;
-import com.unip.aps_redes.model.QuoteDao;
+import com.unip.aps_redes.dao.QuoteDao;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
