@@ -10,7 +10,7 @@ public class ConnectionFactory {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/db_chat?useTimezone=true&serverTimezone=UTC";
-    private static final String USER = "root";
+    private static final String USER = "admin";
     private static final String PASSWORD = "admin";
 
     public static Connection getConnection(String ip) {
@@ -18,7 +18,8 @@ public class ConnectionFactory {
         try {
             Class.forName(DRIVER);
             System.out.println("Conectado com sucesso");
-            return DriverManager.getConnection("jdbc:mysql://" + ip + ":3306/db_chat?useTimezone=true&serverTimezone=UTC", "root", "admin");
+            String url = "jdbc:mysql://" + ip + ":3306/db_chat?useTimezone=true&serverTimezone=UTC&user=root&password=root";
+            return DriverManager.getConnection(url);
         } catch (ClassNotFoundException | SQLException ex) {
             throw new RuntimeException("Erro na conexão", ex);
         }
